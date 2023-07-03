@@ -1,0 +1,32 @@
+$resume-preview-main-height: 1050px;
+$resume-preview-outer-height: 95%;
+$resume-preview-inner-height: 90%;
+$button-group-height:10%;
+
+$breakpoint: 1400px;
+
+.resumePreviewOuter {
+  height: $resume-preview-outer-height;
+  border: 1px solid black;
+  min-width: 645px;
+
+  .resumePreviewInner {
+    height: $resume-preview-inner-height;
+    border: 1px solid red;
+    min-width: 640px;
+
+    .sidebar {
+      background: #0a5e50;
+      height: 100%;
+    }
+  }
+
+  .buttonGroup{
+    height: $button-group-height;
+  }
+}
+
+.resumePreviewMain {
+  height: $resume-preview-main-height;
+  min-width: 650px;
+}

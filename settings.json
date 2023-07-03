@@ -1,0 +1,16 @@
+{
+  "vim.leader": " ",
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.smartRelativeLine": true,
+  "vim.visualModeKeyBindings": [
+  {
+    "before": ["J"],
+    "commands": ["editor.action.moveLinesDownAction"]
+  },
+	{
+    "before": ["K"],
+    "commands": ["editor.action.moveLinesUpAction"]
+  }
+  ],
+}
