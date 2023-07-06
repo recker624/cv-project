@@ -69,15 +69,13 @@ function Skills() {
 
 function ResumeSideBar() {
   return (
-    <div className="sidebar col-4">
-      <div className="name-photo">
-        <Photo />
-        <Name />
-        <Occupation />
-        <Details />
-        <Links />
-        <Skills />
-      </div>
+    <div className="sidebar">
+      <Photo />
+      <Name />
+      <Occupation />
+      <Details />
+      <Links />
+      <Skills />
     </div>
   );
 }

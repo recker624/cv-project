@@ -6,7 +6,7 @@ import ResumeContent from "./ResumeContent/index"
 
 function ResumePreviewInner() {
   return (
-    <div className="container row resumePreviewInner">
+    <div className="resumePreviewInner">
       <ResumeSideBar />
       <ResumeContent />
     </div>
@@ -15,12 +15,12 @@ function ResumePreviewInner() {
 
 function ButtonGroup() {
   return (
-    <div className="container buttonGroup"> 
-      <div className="row justify-content-between">
-        <div className="col">
+    <div className="buttonGroup"> 
+      <div className="">
+        <div className="">
           <button>Convert To PDF</button>
         </div>
-        <div className="col">
+        <div className="">
           <button>Reset</button>
           <button>Load Example</button>
         </div>
@@ -29,10 +29,10 @@ function ButtonGroup() {
   )
 }
 
-function ResumePreviewMain() {
+function ResumePreview() {
   return (
-    <div className="col-xl-6 pt-5 resumePreviewMain">
-      <div className="container resumePreviewOuter">
+    <div className="resumePreview">
+      <div className="resumePreviewOuter">
         <ResumePreviewInner />
         <ButtonGroup />
       </div>
@@ -40,4 +40,4 @@ function ResumePreviewMain() {
   );
 }
 
-export default ResumePreviewMain;
+export default ResumePreview;

@@ -10,6 +10,7 @@ function App() {
         <div className="col-12 col-xxl-6">
           <ResumeForm /> 
         </div>
+        <div className="placeholder-element"></div>
         <ResumePreviewMain />
       </div>
     </div>

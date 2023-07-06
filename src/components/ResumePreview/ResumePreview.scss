@@ -1,32 +1,30 @@
-$resume-preview-main-height: 1050px;
-$resume-preview-outer-height: 95%;
-$resume-preview-inner-height: 90%;
-$button-group-height:10%;
+.resumePreview {
+  height: 1200px;
+  width: 852PX;
+  font-family: "Coolvetica";
 
-$breakpoint: 1400px;
+  .resumePreviewOuter {
+    height:  95%;
+    border: 1px solid black;
+    min-width: 645px;
 
-.resumePreviewOuter {
-  height: $resume-preview-outer-height;
-  border: 1px solid black;
-  min-width: 645px;
+    .resumePreviewInner {
+      height:  90%;
+      border: 1px solid red;
+      min-width: 640px;
+      display: flex;
+      justify-content: flex-start;
+    }
 
-  .resumePreviewInner {
-    height: $resume-preview-inner-height;
-    border: 1px solid red;
-    min-width: 640px;
-
-    .sidebar {
-      background: #0a5e50;
-      height: 100%;
+    .buttonGroup{
+      height: 10%;
     }
   }
-
-  .buttonGroup{
-    height: $button-group-height;
-  }
 }
 
-.resumePreviewMain {
-  height: $resume-preview-main-height;
-  min-width: 650px;
+.resumePreivew-fixed {
+  position: absolute;
+  top: 0;
+  right: 0
 }
+
