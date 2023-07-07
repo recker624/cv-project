@@ -68,6 +68,9 @@ function Projects() {
       <div className="projects-heading">
         <h2>Personal Projects</h2>
       </div>
+      <div className="project-title">
+        Project Title
+      </div>
       <div className="github-link">
         <a href="www.example.com">Github Link</a>
       </div>

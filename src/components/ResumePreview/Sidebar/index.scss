@@ -1,6 +1,68 @@
 .sidebar {
-  background: #0a5e50;
+  background: #09584b;
   height: 100%;
-  width: 30%;
+  flex: 0 0 230px;
+  padding: 10px;
+  display: flex;
+  color: #fff;
+
+  .sidebar-content {
+    width: 100%;
+    margin-top: 40px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name {
+    font-family: "Coolvetica";
+    font-size: 1.6rem;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+      width: 25px;
+      margin: auto;
+      margin: 14px 0;
+      border-bottom: 1px solid #fff;
+    }
+  }
+
+  .occupation {
+    font-size: 11px;
+  }
+
+  .details,
+  .links,
+  .skills {
+    margin-top: 20px;
+    padding: 5px 0;
+    padding-left: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+
+    li {
+      margin: 3px 0;
+      padding: 0;
+    }
+  }
+  h2 {
+    margin-bottom: 5px;
+    font-family: "Ariel";
+    font-weight: 600;
+    font-size: 17px;
+  }
 }
 

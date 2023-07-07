@@ -13,6 +13,7 @@ function Name() {
   return (
     <div className="name">
       My Name
+      <div></div>
     </div>
   );
 }
@@ -20,7 +21,7 @@ function Name() {
 function Occupation() {
   return (
     <div className="occupation">
-      Software Engineer
+      FRONTEND DEVELOPER
     </div>
   );
 }
@@ -28,6 +29,7 @@ function Occupation() {
 function Details() {
   return (
     <div className="details">
+      <h2>Details</h2>
       <ul>
         <li>Address</li>
         <li>Phone</li>
@@ -41,11 +43,11 @@ function Details() {
 function Links() {
   return (
     <div className="links">
+      <h2>Links</h2>
       <ul>
-        <li>www.github.com/myname</li>
-        <li>www.linkedin.com/myname</li>
-        <li>www.myemail.com</li>
-        <li>www.mywebsite.com</li>
+        <li>My Portfolio</li>
+        <li>Linkdin</li>
+        <li>Github</li>
       </ul>
     </div>
   );
@@ -54,6 +56,7 @@ function Links() {
 function Skills() { 
   return (
     <div className="skills">
+      <h2>Skills</h2>
       <ul>
         <li>HTML</li>
         <li>CSS</li>
@@ -70,12 +73,14 @@ function Skills() {
 function ResumeSideBar() {
   return (
     <div className="sidebar">
-      <Photo />
-      <Name />
-      <Occupation />
-      <Details />
-      <Links />
-      <Skills />
+      <div className="sidebar-content">
+        <Photo />
+        <Name />
+        <Occupation />
+        <Details />
+        <Links />
+        <Skills />
+      </div>
     </div>
   );
 }

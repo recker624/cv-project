@@ -1,17 +1,18 @@
 .resumePreview {
   height: 1200px;
   width: 852PX;
-  font-family: "Coolvetica";
+  box-sizing: border-box;
 
   .resumePreviewOuter {
     height:  95%;
     border: 1px solid black;
-    min-width: 645px;
+    width: 852PX;
+
 
     .resumePreviewInner {
       height:  90%;
       border: 1px solid red;
-      min-width: 640px;
+      width: 852PX;
       display: flex;
       justify-content: flex-start;
     }
