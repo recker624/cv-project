@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.scss";
 
 function ProfessionalSummeryInternal() {
   return (
@@ -9,7 +8,7 @@ function ProfessionalSummeryInternal() {
 
 function ProfessionalSummery() {
   return (
-    <div className='mb-5'>
+    <div className='mb-5 professional-summary'>
       <div className="mb-3">
         <h2>Professional Summary</h2>
       </div>

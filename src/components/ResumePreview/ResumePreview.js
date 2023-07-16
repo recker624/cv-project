@@ -1,12 +1,12 @@
 import React from "react";
 import "./ResumePreview.scss";
+import ResumeSideBar from "./Sidebar/index";
+import ResumeContent from "./ResumeContent/index";
 
-import ResumeSideBar from "./Sidebar/index"
-import ResumeContent from "./ResumeContent/index"
 
 function ResumePreviewInner() {
   return (
-    <div className="resumePreviewInner">
+    <div className="resumePreviewInner no-break-inside" id="resumePreviewInner">
       <ResumeSideBar />
       <ResumeContent />
     </div>
@@ -16,15 +16,13 @@ function ResumePreviewInner() {
 function ButtonGroup() {
   return (
     <div className="buttonGroup"> 
-      <div className="">
-        <div className="">
-          <button>Convert To PDF</button>
+        <div className="pdf-btn">
+          <button className="btn btn-primary convert-to-pdf" id="convert-to-pdf" onClick={convertToSVG}>Convert To PDF</button>
         </div>
-        <div className="">
-          <button>Reset</button>
-          <button>Load Example</button>
+        <div className="reset-load-btn">
+          <button className="btn btn-danger">Reset</button>
+          <button className="btn btn-info">Load Example</button>
         </div>
-      </div>
     </div>
   )
 }
@@ -38,6 +36,10 @@ function ResumePreview() {
       </div>
     </div>
   );
+}
+
+const convertToSVG = () => {
+
 }
 
 export default ResumePreview;

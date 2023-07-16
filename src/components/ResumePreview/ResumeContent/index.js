@@ -1,5 +1,7 @@
 import React from "react";
 import "./index.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 function Profile() {
   return (
@@ -9,11 +11,8 @@ function Profile() {
       </div>
       <div className="profile-description">
         <p>
-          Experienced and accomplished Health and Safety Engineer with a proven track record of promoting optimal health and safety in industrial spaces.
-          Committed to identifying and improving substandard processes, while solving safety issues.
-          Experienced in ensuring optimal workflow and efficient production in large-scale printing facilities. Bringing forth an in-depth understanding of facility management aimed at improving safe work processes and functions.
-          Adept in trouble-shooting and working to offer solutions.
-          A strong leader with excellent communication skills and a commitment to teamwork.
+          Results-oriented computer science graduate with a good academic background and a passion for technology. Knowledgeable in software development, data structures, algorithm. With a keen eye for detail and a commitment to writing clean and efficient code.
+          Driven by a constant desire to learn and grow, I continuously expand my knowledge through self-study and  online courses. Eager to contribute my technical expertise and contribute to the success of a forward-thinking organization, I am ready to take on new challenges in the field of computer science.
         </p>
       </div>
     </div>
@@ -30,7 +29,7 @@ function EmploymentHistory() {
         Job Title, Employer, City Name
       </div>
       <div className="job-duration">
-        January 2023 - December 2023
+        JANUARY 2023 - DECEMBER 2023
       </div>
       <div className="employmentDescription">
         <p>
@@ -50,13 +49,13 @@ function Education() {
         <h2>Education</h2>
       </div>
       <div className="education-details">
-        Degree, School, City Name
+        B.tech (Computer Science), VIT Bhopal University, Bhopal
       </div>
       <div className="education-duration">
-        January 2020 - January 2022
+        JULY 2018 - JULY 2022
       </div>
       <div className="educationDescription">
-        <p>Graduated with honors Blablabla</p>
+        <p>Graduated with a GPA of 7.6</p>
       </div>
     </div>
   );
@@ -68,23 +67,52 @@ function Projects() {
       <div className="projects-heading">
         <h2>Personal Projects</h2>
       </div>
-      <div className="project-title">
-        Project Title
-      </div>
-      <div className="github-link">
-        <a href="www.example.com">Github Link</a>
-      </div>
-      <div className="description">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-          when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-        </p>
-      </div>
-      <div className="tech-stack">
-        Tech Used : HTML, CSS, Javascript etc.
-      </div>
+      <ProjectContent
+        projectTitle={"Weather App"}
+        gitHubLink={'https://github.com/recker624/WeatherApp'}
+        description={`A weather app that shows current weather and forcast.  OpenWeather API was used to get the Weather data for this project.`}
+        techUsed={'Javascript, HTML, CSS, Webpack'}
+      />
+      <ProjectContent
+        projectTitle={"Resturant Page"}
+        gitHubLink={'https://github.com/recker624/Resturant-page'}
+        description={`This is a simple landing page for an imaginary resturant website. Webpack was used
+        to bundle the project which allowed for a smoother development process for the application.`}
+        techUsed={'Javascript, HTML, CSS, Webpack'}
+      />
+      <ProjectContent
+        projectTitle={"Book Card App"}
+        gitHubLink={'https://github.com/recker624/Library'}
+        description={`A book card application which allows the user to keep track of their favourite books they've already read or yet to read. This application uses DOM api for adding and deleting various elements on the website.`}
+        techUsed={'Javascript, HTML, CSS'}
+      />
     </div>
   )
+}
+
+function ProjectContent({ projectTitle, gitHubLink, description, techUsed }) {
+  return (
+     <div className="project">
+        <div className="project-border"></div>
+        <div className="project-title">
+        { projectTitle }
+        <a href={ gitHubLink } title="Visit on GitHub">
+            <FontAwesomeIcon icon={faLink}/>
+          </a>
+        </div>
+        <div className="github-link">
+          
+        </div>
+        <div className="description">
+          <p>
+            {description}
+          </p>
+        </div>
+        <div className="tech-stack">
+        {techUsed}
+      </div>
+    </div>
+  );
 }
 
 function ResumeContent() {

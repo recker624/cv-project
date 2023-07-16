@@ -1,18 +1,19 @@
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import "./index.scss"
 
 function ExternalLinksInternal() {
   return (
     <div>
-      <button>+ Add link</button>
+      <button className="btn btn-secondary"><FontAwesomeIcon icon={faPlus}/> Add link</button>
     </div>
   );
 }
 
 function ExternalLinks() {
   return (
-    <div className='mb-5'>
-      <div className="mb-3">
+    <div className='mb-4 external-links'>
+      <div className="mb-2">
         <h2>Websites and Social Links</h2>
       </div>
       <ExternalLinksInternal />

@@ -1,21 +1,121 @@
 .resume-content {
-  margin-top: 40px;
+  margin-top: 20px;
   margin-left: 10px;
   padding: 5px 20px;
-  
+  width: 100%;
+
+  .profile,
+  .employmentHistory,
+  .education,
+  .personal-projects {
+    width: 100%;
+    padding: 0;
+    margin-top: 30px;
+
+  }
+
+  .employmentHistory {
+    .job-details {
+      font-family:'Lucida Sans Unicode', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .job-duration {
+      font-family:'Lucida Sans Unicode', sans-serif;
+      font-size: 10px;
+      color: #8b8b8b;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 4px;
+      letter-spacing: 0.8px;
+    }
+  }
+
+  .education {
+    .education-details {
+      font-family:'Lucida Sans Unicode', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .education-duration {
+      font-family:'Lucida Sans Unicode', sans-serif;
+      font-size: 10px;
+      color: #8b8b8b;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 4px;
+      letter-spacing: 0.8px;
+    }
+  }
+
+  .personal-projects {
+
+    .project {
+      width: 100%;
+      padding-left:7px;
+      position: relative;
+      margin-bottom: 10px;
+
+      .project-border{
+        position: absolute;
+        left: -4px;
+        top: 5%;
+        border-left: 2px solid #20b920;;
+        height: 90%;
+      }
+
+      .project-title {
+        font-family:'Lucida Sans Unicode', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+
+        a {
+          margin-left: 3px;
+          color: #20b920;
+          cursor:pointer;
+        }
+      }
+
+      .github-link {
+        font-family: 'Helvetica';
+        font-size: 13px;
+      }
+
+      .description {
+        p{
+          margin-bottom: 2px;
+          margin-top: 4px;
+          width: 95%;
+        }
+      }
+
+      .tech-stack {
+        margin-top: 0px;
+        font-family: 'Lucida Sans Unicode', sans-serif;
+        padding: 0;
+        font-size: 12px;
+        font-weight: 600;
+        color: #8b8b8b;
+      }
+    }
+  }
+
+
   h2{
     padding: 0;
     margin: 0;
     margin-bottom: 8px;
-    font-family: "Ariel";
+    font-family:  'Noto Serif Makasar', serif;
     font-weight: 600;
     letter-spacing: 1px;
-    font-size: 1.3rem;
+    font-size: 20px;
   }
 
   p {
     font-family: sans-serif;
-    font-size: 0.8rem;
+    font-size: 13px;
     font-weight: 300;
   }
 }
