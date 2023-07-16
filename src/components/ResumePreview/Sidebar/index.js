@@ -1,10 +1,15 @@
 import React from "react";
 import "./index.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+
+//=================
+import myImage from '../../../assets/images/my-image.jpg';
 
 function Photo() {
   return (
     <div className="photo">
-      Photo Here
+      <img src={ myImage } alt="profile-photo" />
     </div>
   )
 }
@@ -12,7 +17,7 @@ function Photo() {
 function Name() {
   return (
     <div className="name">
-      My Name
+      Sahil Saini
       <div></div>
     </div>
   );
@@ -31,10 +36,10 @@ function Details() {
     <div className="details">
       <h2>Details</h2>
       <ul>
-        <li>Address</li>
-        <li>Phone</li>
-        <li>Email</li>
-        <li>Website</li>
+        {/* <li>Address</li> */}
+        <li>+91 6265702234</li>
+        <li>sahilsaini624@gmail.com</li>
+        {/* <li>Website</li> */}
       </ul>
     </div>
   );
@@ -45,9 +50,9 @@ function Links() {
     <div className="links">
       <h2>Links</h2>
       <ul>
-        <li>My Portfolio</li>
-        <li>Linkdin</li>
-        <li>Github</li>
+        <li><a href="https://sahilsaini.netlify.app">My Portfolio <FontAwesomeIcon icon={ faLink}/></a></li>
+        <li><a href="https://www.linkedin.com/in/sahil-saini-977870282">LinkedIn <FontAwesomeIcon icon={ faLink}/></a></li>
+        <li><a href="https://github.com/recker624">GitHub <FontAwesomeIcon icon={ faLink}/></a></li>
       </ul>
     </div>
   );
@@ -58,13 +63,12 @@ function Skills() {
     <div className="skills">
       <h2>Skills</h2>
       <ul>
-        <li>HTML</li>
-        <li>CSS</li>
         <li>JavaScript</li>
         <li>React</li>
-        <li>Node</li>
-        <li>Node.js</li>
-        <li>MongoDB</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Bootstrap</li>
+        <li>C++</li>
       </ul>
     </div>
   );

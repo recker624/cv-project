@@ -1,18 +1,20 @@
 import React from 'react';
-import "./index.scss"
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 function PersonalProjectsInternal() {
   return (
     <div>
-      <button>+ Add project</button>
+      <button className="btn btn-secondary"><FontAwesomeIcon icon={faPlus}/> Add project</button>
     </div>
   );
 }
 
 function PersonalProjects() {
   return (
-    <div className='mb-5'>
-      <div className="mb-3">
+    <div className='mb-4 personal-projects'>
+      <div className="mb-2">
         <h2>Personal Projects</h2>
       </div>
       <PersonalProjectsInternal />

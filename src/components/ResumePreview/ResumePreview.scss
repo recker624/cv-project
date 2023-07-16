@@ -1,31 +1,44 @@
 .resumePreview {
-  height: 1200px;
-  width: 852PX;
+  height: 1150px;
+  width: 820PX !important;
   box-sizing: border-box;
+  margin: 5% auto;
+  padding-top: 10px;
+  background: #fff;
+  border-left: 1px solid black;
 
   .resumePreviewOuter {
     height:  95%;
-    border: 1px solid black;
-    width: 852PX;
-
+    width: 100%; 
 
     .resumePreviewInner {
-      height:  90%;
-      border: 1px solid red;
-      width: 852PX;
+      height:  94%;
+      border: 1px solid #000;
+      border-radius: 10px 10px 0 0;
+      width: 100%;
       display: flex;
       justify-content: flex-start;
+      box-shadow: 0 0 10px rgb(97, 97, 97);
     }
 
     .buttonGroup{
-      height: 10%;
+      height: 6%;
+      width: 100%;
+      padding: 5px;
+      display: flex;
+      justify-content: space-between;
+      background: #3b3b3b;
+      border-radius: 0 0px 10px 10px;
+      box-shadow: 0 0 10px rgb(97, 97, 97);
+
+      .reset-load-btn {
+        width: 25%;
+        
+        button  {
+          margin-left: 4px;
+        }
+      }
+      
     }
   }
 }
-
-.resumePreivew-fixed {
-  position: absolute;
-  top: 0;
-  right: 0
-}
-
