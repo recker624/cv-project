@@ -1,0 +1,13 @@
+.skills {
+  .skills-list {
+    div {
+      display: flex;
+      justify-content: flex-start;
+      column-gap: 5px;
+      
+      input {
+        flex: 0 0 95%;
+      }
+    }
+  }
+}

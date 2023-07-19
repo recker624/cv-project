@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function EmploymentDetailsInternal() {
+function EmploymentHistoryInternal() {
   return (
     <div className='row'>
       <div className='col-md-6 mb-2'>
@@ -34,15 +34,15 @@ function EmploymentDetailsInternal() {
   );
 }
 
-function EmploymentDetails() {
+function EmploymentHistory() {
   return (
     <div className='mb-5 employment-details'>
       <div className="mb-2">
         <h2>Employment Details</h2>
       </div>
-      <EmploymentDetailsInternal />
+      <EmploymentHistoryInternal />
     </div>
   );
 }
 
-export default EmploymentDetails;
+export default EmploymentHistory;

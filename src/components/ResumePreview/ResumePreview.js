@@ -4,10 +4,10 @@ import ResumeSideBar from "./Sidebar/index";
 import ResumeContent from "./ResumeContent/index";
 
 
-function ResumePreviewInner() {
+function ResumePreviewInner({ personalDetails }) {
   return (
     <div className="resumePreviewInner no-break-inside" id="resumePreviewInner">
-      <ResumeSideBar />
+      <ResumeSideBar personalDetails={personalDetails}/>
       <ResumeContent />
     </div>
   );
@@ -27,15 +27,24 @@ function ButtonGroup() {
   )
 }
 
-function ResumePreview() {
-  return (
-    <div className="resumePreview">
-      <div className="resumePreviewOuter">
-        <ResumePreviewInner />
-        <ButtonGroup />
+class ResumePreview extends React.Component {
+  // eslint-disable-next-line no-useless-constructor
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    
+    return (
+      <div className="resumePreview">
+        <div className="resumePreviewOuter">
+          <ResumePreviewInner />
+          <ButtonGroup />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+
 }
 
 const convertToSVG = () => {
