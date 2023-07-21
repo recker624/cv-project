@@ -10,7 +10,7 @@ function PersonalDetailsInternal({ onPersonalDetailsChange, personalDetails }) {
       </div>
       <div className='col-md-6 mb-2'>
         <label htmlFor="photo" className="form-label">Upload Photo</label>
-        <input id="photo" className="form-control" type="file" onChange={onPersonalDetailsChange} value={personalDetails.photo} data-type="photo"/>
+        <input id="photo" accept="image/*" className="form-control" type="file" onChange={onPersonalDetailsChange}  data-type="photo"/>
       </div>
       <div className='col-md-6 mb-2'>
         <label htmlFor="firstname" className="form-label">First Name</label>

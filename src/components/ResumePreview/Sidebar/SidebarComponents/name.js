@@ -1,8 +1,8 @@
-function Name() {
+function Name({ firstName, lastName }) {
   return (
     <div className="name">
-      Sahil Saini
-      <div></div>
+      <p> {firstName + " " + lastName}</p>
+      <div className="underline"></div>
     </div>
   );
 }

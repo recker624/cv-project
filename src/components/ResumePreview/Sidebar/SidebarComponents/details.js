@@ -1,12 +1,23 @@
-function Details() {
+function Details({ email, phone, country, city }) {
+  
   return (
     <div className="details">
-      <h2>Details</h2>
+      {
+        (email || phone || country || city) ? <h2>Details</h2> : null
+      }
       <ul>
-        {/* <li>Address</li> */}
-        <li>+91 6265702234</li>
-        <li>sahilsaini624@gmail.com</li>
-        {/* <li>Website</li> */}
+        {
+          email ? <li>{email}</li> : null
+        }
+        {
+          phone ? <li>{phone[0].toUpperCase() + phone.slice(1)}</li> : null
+        }
+        {
+          country ? <li>{country[0].toUpperCase() + country.slice(1)}</li> : null
+        }
+        {
+          city ? <li>{city[0].toUpperCase() + city.slice(1)}</li> : null
+        }
       </ul>
     </div>
   );

@@ -7,12 +7,22 @@ class ProfessionalSummery extends React.Component {
   }
 
   render() {
+
+    const { onProfessionalSummaryChange: changeProfessionalSummary, professionalSummary } = this.props;
+
     return (
       <div className='mb-5 professional-summary'>
         <div className="mb-3">
           <h2>Professional Summary</h2>
         </div>
-        <textarea id="professional-summary" className='form-control' rows="5" cols="40"></textarea>
+        <textarea
+          onChange={changeProfessionalSummary}
+          value={professionalSummary.description}
+          id="professional-summary"
+          className='form-control'
+          rows="5"
+          cols="40"
+        />
       </div>
     );   
   }

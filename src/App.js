@@ -19,13 +19,14 @@ class App extends React.Component {
         country: '',
         city: '',
       },
-      professionalDetails: {
+      professionalSummary: {
         description: '',
       },
       educationalDetails: {
         startDate: '',
         endDate: '',
         degree: '',
+        city:'',
         institution: '',
       },
       employmentHistory: {
@@ -42,7 +43,7 @@ class App extends React.Component {
     }
 
     this.handlePersonalDetailsChange      = this.handlePersonalDetailsChange.bind(this);
-    this.handleProfessionalDetailsChange  = this.handleProfessionalDetailsChange.bind(this);
+    this.handleProfessionalSummaryChange  = this.handleProfessionalSummaryChange.bind(this);
     this.handleEducationalDetailsChange   = this.handleEducationalDetailsChange.bind(this);
     this.handleEmploymentHistoryChange    = this.handleEmploymentHistoryChange.bind(this);
     this.handleSkillsAdd                  = this.handleSkillsAdd.bind(this);
@@ -59,15 +60,32 @@ class App extends React.Component {
   handlePersonalDetailsChange(e) {
     const value = e.target.value;
     let tempPersonalDetails = this.state.personalDetails;
-    tempPersonalDetails[e.target.dataset.type] = value;
+    let dataType = e.target.dataset.type;
+
+    //if the changed property the photo then change the URL of the uploaded photo else 
+    //normally update the properties
+    if (dataType !== 'photo') {
+      tempPersonalDetails[dataType] = value;
+    }
+    else {
+      const photoFile = e.target.files[0];
+      tempPersonalDetails[dataType] = photoFile ? URL.createObjectURL(photoFile) : tempPersonalDetails.photo;
+    }
 
     this.setState({
       personalDetails: { ...tempPersonalDetails } ,
     });
+
+
   }
 
-  handleProfessionalDetailsChange() {
-  
+  handleProfessionalSummaryChange(e) {
+    const value = e.target.value;
+    let tempProfessionalSummary = this.state.professionalSummary;
+    tempProfessionalSummary.description = value;
+    this.setState({
+       professionalSummary: { ...tempProfessionalSummary } ,
+    });
   }
 
   handleEducationalDetailsChange() {
@@ -164,7 +182,7 @@ class App extends React.Component {
             <div className="col-12 col-xxl-6">
               <ResumeForm
                 onPersonalDetailsChange = {this.handlePersonalDetailsChange} personalDetails={this.state.personalDetails}
-                onProfessionalDetailsChange = {this.handleProfessionalDetailsChange} professionalDetails={this.state.professionalDetails}
+                onProfessionalSummaryChange = {this.handleProfessionalSummaryChange} professionalSummary={this.state.professionalSummary}
                 onEducationalDetailsChange = {this.handleEducationalDetailsChange} educationalDetails={this.state.educationalDetails}
                 onEmploymentHistoryChange = {this.handleEmploymentHistoryChange} employmentHistory={this.state.employmentHistory}
                 onSkillsChange = {this.handleSkillsChange} onSkillsAdd={this.handleSkillsAdd} onSkillsDelete={this.handleSkillsDelete} skills={this.state.skills}
@@ -174,6 +192,12 @@ class App extends React.Component {
             </div>
             <ResumePreview
               personalDetails={this.state.personalDetails}
+              professionalSummary={this.state.professionalSummary}
+              educationalDetails={this.state.educationalDetails}
+              employmentHistory={this.state.employmentHistory}
+              skills={this.state.skills}
+              externalLinks={this.state.externalLinks}
+              personalProjects={this.state.personalProjects}
             />
           </div>
         </div>

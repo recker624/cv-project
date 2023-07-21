@@ -1,14 +1,15 @@
-function Skills() { 
+function Skills({skills}) { 
   return (
     <div className="skills">
-      <h2>Skills</h2>
+      {
+        (skills.length > 0) ? <h2>Skills</h2> : null
+      }
       <ul>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Bootstrap</li>
-        <li>C++</li>
+        {
+          skills.map((skill, index) => {
+            return <li key={skill._id + index}>{skill.skillName}</li>
+          })
+        }
       </ul>
     </div>
   );

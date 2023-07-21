@@ -4,11 +4,29 @@ import ResumeSideBar from "./Sidebar/index";
 import ResumeContent from "./ResumeContent/index";
 
 
-function ResumePreviewInner({ personalDetails }) {
+function ResumePreviewInner({
+      personalDetails,
+      professionalSummary,
+      educationalDetails, 
+      employmentHistory, 
+      skills, 
+      externalLinks, 
+      personalProjects 
+})
+{
   return (
     <div className="resumePreviewInner no-break-inside" id="resumePreviewInner">
-      <ResumeSideBar personalDetails={personalDetails}/>
-      <ResumeContent />
+      <ResumeSideBar
+        personalDetails={personalDetails}
+        externalLinks={externalLinks}
+        skills={skills}
+      />
+      <ResumeContent
+        professionalSummary={professionalSummary}
+        employmentHistory={employmentHistory}
+        educationalDetails={educationalDetails}
+        personalProjects={personalProjects}
+      />
     </div>
   );
 } 
@@ -34,11 +52,29 @@ class ResumePreview extends React.Component {
   }
 
   render() {
+
+    const {
+      personalDetails,
+      professionalSummary,
+      educationalDetails, 
+      employmentHistory, 
+      skills, 
+      externalLinks, 
+      personalProjects 
+    } = this.props;
     
     return (
       <div className="resumePreview">
         <div className="resumePreviewOuter">
-          <ResumePreviewInner />
+          <ResumePreviewInner
+            personalDetails={personalDetails}
+            professionalSummary={professionalSummary}
+            educationalDetails={educationalDetails}
+            employmentHistory={employmentHistory}
+            skills={skills}
+            externalLinks={externalLinks}
+            personalProjects={personalProjects}
+          />
           <ButtonGroup />
         </div>
       </div>

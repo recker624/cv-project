@@ -22,7 +22,7 @@ class ResumeForm extends React.Component {
     return (
       <div className="resume-form container pt-5 px-3">
         <PersonalDetails onPersonalDetailsChange={props.onPersonalDetailsChange} personalDetails={props.personalDetails}/>
-        <ProfessionalSummery onProfessionalDetailsChange={props.onProfessionalDetailsChange} professionalDetails={props.professionalDetails} />
+        <ProfessionalSummery onProfessionalSummaryChange={props.onProfessionalSummaryChange} professionalSummary={props.professionalSummary} />
         <EducationalDetails onEducationalDetailsChange={props.onEducationalDetailsChange} educationalDetails={props.educationalDetails} />  
         <EmploymentHistory onEmploymentHistoryChange={props.onEmploymentHistoryChange} employmentHistory={props.employmentHistory} />
         <Skills onSkillsChange={props.onSkillsChange} onSkillsAdd={props.onSkillsAdd} onSkillsDelete={ props.onSkillsDelete} skills={props.skills} />

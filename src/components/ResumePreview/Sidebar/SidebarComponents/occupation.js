@@ -1,7 +1,8 @@
-function Occupation() {
+function Occupation({ jobTitle }) {
+  if (jobTitle.length === 0) return;
   return (
     <div className="occupation">
-      FRONTEND DEVELOPER
+      {jobTitle.toUpperCase()}
     </div>
   );
 }
