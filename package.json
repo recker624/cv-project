@@ -1,6 +1,7 @@
 {
   "name": "cv-project",
   "version": "0.1.0",
+  "homepage": "https://{recker624}.github.io/{cv-project}",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
@@ -32,7 +33,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "ghPages": "git subtree push --prefix dist origin gh-pages"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -51,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
