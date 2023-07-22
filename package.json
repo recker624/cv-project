@@ -1,7 +1,7 @@
 {
   "name": "cv-project",
   "version": "0.1.0",
-  "homepage": "https://{recker624}.github.io/{cv-project}",
+  "homepage": "https://recker624.github.io/cv-project",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
