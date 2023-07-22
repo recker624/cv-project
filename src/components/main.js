@@ -196,7 +196,7 @@ class Main extends React.Component {
     this.setState({
       personalDetails: {
         jobTitle: 'Software Engineer',
-        photo: '../../../../assets/images/shiba.jpg',
+        photo: '',
         firstName: 'John',
         lastName: 'Doe',
         email: 'johndoe@example.com',
