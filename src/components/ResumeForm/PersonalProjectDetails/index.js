@@ -3,6 +3,8 @@ import { faPlus, faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import uniqid from 'uniqid';
 
+import "./index.scss";
+
 class PersonalProjects extends React.Component {
   //eslint-disable-next-line no-useless-constructor
   constructor(props) {
@@ -27,10 +29,10 @@ class PersonalProjects extends React.Component {
           {
             personalProjects.map((project, index) => {
               return (
-                <div key={project._id} className='row'>
+                <div key={project._id} className='row personal-projects-list-item p-1 pt-4 my-2 mx-1'>
                   <button
                     onClick={(e) => deletePersonalProjects(e, index)}
-                    className="btn btn-secondary deleteSkillBtn"
+                    className="btn btn-danger deleteProjectBtn"
                   >
                       <FontAwesomeIcon icon={faX} />
                   </button>
@@ -63,7 +65,7 @@ class PersonalProjects extends React.Component {
                     <textarea
                       className="form-control"
                       id="project-description"
-                      rows={4}
+                      rows={3}
                       data-type="projectDescription"
                       value={project.projectDescription}
                       placeholder='Tell something about this project'

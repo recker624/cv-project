@@ -1,20 +1,31 @@
-function EmploymentHistory() {
+function EmploymentHistory({ employmentHistory}) {
+
+  const { jobTitle, employer, startDate, endDate, city, description } = employmentHistory;
+  const months = [
+    "January", "February", "March", "April",
+    "May", "June", "July", "August",
+    "September", "October", "November", "December"
+  ];
+
+  let newStartDate  = startDate ? `${months[new Date(startDate).getMonth()].toUpperCase()} ${new Date(startDate).getFullYear()}` : null;;
+  let newEndDate    = endDate ? `${months[new Date(endDate).getMonth()].toUpperCase()} ${new Date(endDate).getFullYear()}` : null;
+
   return (
     <div className="employmentHistory">
       <div className="employmentHistory-heading">
-        <h2>Employment History</h2>
+        {
+          (jobTitle || employer || startDate || endDate || city || description) ? <h2>Employment History</h2> : null
+        }
       </div>
       <div className="job-details">
-        Job Title, Employer, City Name
+        {jobTitle ? (jobTitle + ", ") : ""} {employer ? (employer + ", ") : ""} {city}
       </div>
       <div className="job-duration">
-        JANUARY 2023 - DECEMBER 2023
+        {newStartDate ? (newStartDate + " - ") : ""} {newEndDate}
       </div>
       <div className="employmentDescription">
         <p>
-          Conducted comprehensive job analyses to update job descriptions and salary benchmarks, resulting in improved job satisfaction and equity
-          Wrote engaging job descriptions that clearly articulated the job duties and requirements
-          Updated job descriptions and job postings to ensure legal compliance and attract qualified candidates.
+          {description}
         </p>
       </div>
     </div>

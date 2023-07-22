@@ -11,7 +11,7 @@ function Links({ externalLinks }) {
       <ul>{
         externalLinks.map((link, index) => {
           return (
-            <li><a href={link.linkURL}> {link.linkName} <FontAwesomeIcon icon={ faLink}/></a></li>
+            <li key={link._id + index}><a href={link.linkURL}> {link.linkName} <FontAwesomeIcon icon={ faLink}/></a></li>
             );
           })
         }

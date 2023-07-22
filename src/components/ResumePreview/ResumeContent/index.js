@@ -16,8 +16,8 @@ class ResumeContent extends React.Component {
 
     const {
       professionalSummary,
-      employmentHistory,
       educationalDetails,
+      employmentHistory,
       personalProjects
     } = this.props;
 

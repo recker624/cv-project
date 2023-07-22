@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import uniqid from 'uniqid';
 
+import "./index.scss";
+
 
 class ExternalLinks extends React.Component {
   //eslint-disable-next-line no-useless-constructor
@@ -25,40 +27,44 @@ class ExternalLinks extends React.Component {
         <div className="mb-2">
           <h2>Websites and Social Links</h2>
         </div>
-        <div className="externalLinks-list">
-          {
-            externalLinks.map((link, index) => {
-              return (
-                <div key={link._id}>
-                  <div className="link-data ">
-                    <input
-                      type="text"
-                      value={link.linkName}
-                      data-type="linkName"
-                      onChange={(e) => changeExternalLinks(e, index)}
-                      className="form-control my-2"
-                      placeholder="Enter Website Name"
-                    />
-                    <input
-                      type="text"
-                      value={link.linkURL}
-                      data-type="linkURL"
-                      onChange={(e) => changeExternalLinks(e, index)}
-                      className="form-control my-2"
-                      placeholder="Enter Website Link"
-                    />  
+        {
+          (externalLinks.length !==0) && 
+          <div className="externalLinks-list p-2 mb-2">
+            {
+              externalLinks.map((link, index) => {
+                return (
+                  <div key={link._id} className="externalLinks-list-item">
+                    <div className="link-data ">
+                      <input
+                        type="text"
+                        value={link.linkName}
+                        data-type="linkName"
+                        onChange={(e) => changeExternalLinks(e, index)}
+                        className="form-control my-2"
+                        placeholder="Enter Website Name"
+                      />
+                      <input
+                        type="text"
+                        value={link.linkURL}
+                        data-type="linkURL"
+                        onChange={(e) => changeExternalLinks(e, index)}
+                        className="form-control my-2"
+                        placeholder="Enter Website Link"
+                      />  
+                    </div>
+                    <button
+                      onClick={(e) => deleteExternalLinks(e, index)}
+                      className="btn btn-white deleteSkillBtn"
+                    >
+                        <FontAwesomeIcon icon={faTrashCan} />
+                    </button>
                   </div>
-                  <button
-                    onClick={(e) => deleteExternalLinks(e, index)}
-                    className="btn btn-white deleteSkillBtn"
-                  >
-                      <FontAwesomeIcon icon={faTrashCan} />
-                  </button>
-                </div>
-              );
-            })
-          }
-        </div>
+                );
+              })
+            }
+          </div>
+        }
+       
         <div>
           <button onClick={(e) => addExternalLinks(e, uniqid())} className="btn btn-secondary"><FontAwesomeIcon icon={faPlus}/> Add link</button>
         </div>

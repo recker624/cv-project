@@ -7,7 +7,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,  
-  xxl: 1752px
+  xxl: 1688px
 );
 
 $container-max-widths: (
@@ -23,27 +23,27 @@ $container-max-widths: (
 
 @font-face {
   font-family: "Coolvetica";
-  src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format(woff2);
+  src: url('../assets/fonts/CoolveticaRg-Regular.woff2') format(woff2);
 }
 
 @font-face {
   font-family: "Helvetica";
-  src: url('./assets/fonts/helvetica-neu.ttf') format(ttf);
+  src: url('../assets/fonts/helvetica-neu.ttf') format(ttf);
 }
 
 @font-face {
   font-family: "Source Code Pro";
-  src: url('./assets/fonts/SourceCodePro-Regular.ttf') format(ttf);
+  src: url('../assets/fonts/SourceCodePro-Regular.ttf') format(ttf);
 }
 
 @font-face {
   font-family: "Noto Sans";
-  src: url('./assets/fonts/NotoSans-Regular.ttf') format(ttf);
+  src: url('../assets/fonts/NotoSans-Regular.ttf') format(ttf);
 }
 
 @font-face {
   font-family: "Noto Serif Makasar";
-  src: url('./assets/fonts/NotoSerifMakasar-Regular.ttf') format(ttf);
+  src: url('../assets/fonts/NotoSerifMakasar-Regular.ttf') format(ttf);
 }
 
 
@@ -63,4 +63,8 @@ nav {
     font-family: "Coolvetica", sans-serif;
     letter-spacing: 3px;
   }
+}
+
+.main {
+  background-color: #dadada9a;
 }

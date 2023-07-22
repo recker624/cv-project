@@ -21,7 +21,6 @@ class ProfessionalSummery extends React.Component {
           id="professional-summary"
           className='form-control'
           rows="5"
-          cols="40"
         />
       </div>
     );   

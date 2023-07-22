@@ -1,0 +1,16 @@
+.externalLinks-list {
+  
+  border-top: 2px solid #55555588;
+  border-bottom: 2px solid #55555588;
+  
+  .externalLinks-list-item{
+    display: flex;
+    justify-content: flex-start;
+  }
+  .link-data {
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    column-gap:5px;
+  }
+}

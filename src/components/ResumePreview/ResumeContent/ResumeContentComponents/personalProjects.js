@@ -1,42 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
-function Projects() {
+function ProjectContent({ projectTitle, gitHubLink, description, additionalInfo }) {
   return (
-    <div className="personal-projects">
-      <div className="projects-heading">
-        <h2>Personal Projects</h2>
-      </div>
-      <ProjectContent
-        projectTitle={"Weather App"}
-        gitHubLink={'https://github.com/recker624/WeatherApp'}
-        description={`A weather app that shows current weather and forcast.  OpenWeather API was used to get the Weather data for this project.`}
-        techUsed={'Javascript, HTML, CSS, Webpack'}
-      />
-      <ProjectContent
-        projectTitle={"Resturant Page"}
-        gitHubLink={'https://github.com/recker624/Resturant-page'}
-        description={`This is a simple landing page for an imaginary resturant website. Webpack was used
-        to bundle the project which allowed for a smoother development process for the application.`}
-        techUsed={'Javascript, HTML, CSS, Webpack'}
-      />
-      <ProjectContent
-        projectTitle={"Book Card App"}
-        gitHubLink={'https://github.com/recker624/Library'}
-        description={`A book card application which allows the user to keep track of their favourite books they've already read or yet to read. This application uses DOM api for adding and deleting various elements on the website.`}
-        techUsed={'Javascript, HTML, CSS'}
-      />
-    </div>
-  )
-}
-
-function ProjectContent({ projectTitle, gitHubLink, description, techUsed }) {
-  return (
-     <div className="project">
+     <div className="project" >
         <div className="project-border"></div>
         <div className="project-title">
         { projectTitle }
-        <a href={ gitHubLink } title="Visit on GitHub">
+        <a href={ gitHubLink } title="View Project">
             <FontAwesomeIcon icon={faLink}/>
           </a>
         </div>
@@ -48,11 +20,47 @@ function ProjectContent({ projectTitle, gitHubLink, description, techUsed }) {
             {description}
           </p>
         </div>
-        <div className="tech-stack">
-        {techUsed}
+        <div className="additional-info">
+        {additionalInfo}
       </div>
     </div>
   );
 }
+
+class Projects extends React.Component {
+  //eslint-disable-next-line no-useless-constructor
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    const { personalProjects } = this.props;
+
+    return (
+        <div className="personal-projects">
+          <div className="projects-heading">
+            {
+              personalProjects.length > 0 ? <h2>Personal Projects</h2> : null
+            }
+          </div>
+          {
+            personalProjects.map((project, index) => {
+              return (
+                <ProjectContent
+                  key={project._id + index}
+                  projectTitle={project.projectTitle}
+                  gitHubLink={project.projectLink}
+                  description={project.projectDescription}
+                  additionalInfo={project.additionalInfo}
+                />
+              );
+            })
+          }
+
+        </div>
+      )
+  }
+}
+
 
 export default Projects;

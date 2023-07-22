@@ -1,0 +1,19 @@
+.personal-projects-list {
+  .personal-projects-list-item {
+    border: 2px solid #35353588;
+    border-radius: 10px;
+    position: relative;
+
+    .deleteProjectBtn {
+      position: absolute;
+      right: 1%;
+      top: 2%;
+      font-size: 1rem;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

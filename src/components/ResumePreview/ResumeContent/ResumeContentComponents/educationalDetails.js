@@ -1,17 +1,29 @@
-function Education() {
+function Education({educationalDetails}) {
+  const { startDate, endDate, degree, city, institution, description } = educationalDetails;
+  const months = [
+    "January", "February", "March", "April",
+    "May", "June", "July", "August",
+    "September", "October", "November", "December"
+  ];
+
+  let newStartDate  = startDate ? `${months[new Date(startDate).getMonth()].toUpperCase()} ${new Date(startDate).getFullYear()}` : null;;
+  let newEndDate    = endDate ? `${months[new Date(endDate).getMonth()].toUpperCase()} ${new Date(endDate).getFullYear()}` : null;
+  
   return (
     <div className="education">
       <div className="education-heading">
-        <h2>Education</h2>
+        {
+          (startDate || endDate || degree || city || institution || description) ? <h2>Education</h2> : null
+        }
       </div>
       <div className="education-details">
-        B.tech (Computer Science), VIT Bhopal University, Bhopal
+        {degree ? (degree+ ", ") : ""} {institution ? (institution + ", ") : ""} {city}
       </div>
       <div className="education-duration">
-        JULY 2018 - JULY 2022
+        {newStartDate ? (newStartDate + " - "):""}  {newEndDate}
       </div>
       <div className="educationDescription">
-        <p>Graduated with a GPA of 7.6</p>
+        <p>{description}</p>
       </div>
     </div>
   );

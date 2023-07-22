@@ -19,29 +19,32 @@ class Skills extends React.Component {
         <div className="mb-2">
           <h2>Skills</h2>
         </div>
-        <div className="skills-list">
-          {
-            skills.map((skill, index) => {
-              return (
-                <div key={skill._id}>
-                  <input
-                    type="text"
-                    value={skill.skillName}
-                    onChange={(e) => changeSkills(e, index)}
-                    className="form-control my-2"
-                    placeholder="Enter skill"
-                  />
-                  <button
-                    onClick={(e) => deleteSkills(e, index)}
-                    className="btn btn-white deleteSkillBtn"
-                  >
-                    <FontAwesomeIcon icon={faTrashCan} />
-                  </button>
-                </div>
-              );
-            })
-          }
-        </div>
+        {
+          (skills.length !==0) && 
+          <div className="skills-list p-2 mb-2">
+            {
+              skills.map((skill, index) => {
+                return (
+                  <div key={skill._id}>
+                    <input
+                      type="text"
+                      value={skill.skillName}
+                      onChange={(e) => changeSkills(e, index)}
+                      className="form-control my-2"
+                      placeholder="Enter skill"
+                    />
+                    <button
+                      onClick={(e) => deleteSkills(e, index)}
+                      className="btn btn-white deleteSkillBtn"
+                    >
+                      <FontAwesomeIcon icon={faTrashCan} />
+                    </button>
+                  </div>
+                );
+              })
+            }
+          </div>
+        }
         <div>
           <button onClick={(e)=>addSkills(e, uniqid())} className="btn btn-secondary mt-2"><FontAwesomeIcon icon={faPlus}/> Add skill</button>
         </div>
