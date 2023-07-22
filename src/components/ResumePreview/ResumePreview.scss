@@ -1,6 +1,6 @@
 .resumePreview {
   margin-top: 50px !important;
-  height: 1150px;
+  height: 1250px;
   width: 800PX !important;
   box-sizing: border-box;
   margin: 5% auto;
@@ -10,18 +10,18 @@
   
   .resumePreviewOuter {
     width: 210mm;
-    height: 297mm;
+    height: (297mm + 15mm);
     box-shadow: 0 10px 10px 5px #8b8b8b;
 
 
     .buttonGroup{
-      height: 65.55px;
+      height: 15mm;
       width: 210mm;
       padding: 5px;
       display: flex;
       justify-content: space-between;
       background: #3b3b3b;
-      border-radius: 0 0px 10px 10px;
+      border-radius:10px 10px  0 0px ;
       box-shadow: 0 10px 10px 5px #8b8b8b;
       
       .pdf-btn{
@@ -48,8 +48,7 @@
 .resumePreviewInner {
   width: 210mm;
   height: 297mm;
-  border: 1px solid #000;
-  border-radius: 10px 10px 0 0;
+  border-radius: 0 0 10px 10px;
 
   display: flex;
   justify-content: flex-start;

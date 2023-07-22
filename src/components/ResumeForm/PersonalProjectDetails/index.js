@@ -32,7 +32,7 @@ class PersonalProjects extends React.Component {
                 <div key={project._id} className='row personal-projects-list-item p-1 pt-4 my-2 mx-1'>
                   <button
                     onClick={(e) => deletePersonalProjects(e, index)}
-                    className="btn btn-danger deleteProjectBtn"
+                    className="btn btn-secondary deleteProjectBtn"
                   >
                       <FontAwesomeIcon icon={faX} />
                   </button>

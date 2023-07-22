@@ -15,16 +15,7 @@ class ResumePreview extends React.Component {
     return (
       <div className="resumePreview">
         <div className="resumePreviewOuter">
-          <ResumePreviewInner
-            ref={el => (this.componentRef = el)}
-            personalDetails = {props.personalDetails}
-            professionalSummary = {props.professionalSummary}
-            educationalDetails = {props.educationalDetails}
-            employmentHistory = {props.employmentHistory}
-            skills = {props.skills}
-            externalLinks = {props.externalLinks}
-            personalProjects = {props.personalProjects}
-          />
+          
           <div className="buttonGroup">
             <div className="pdf-btn">
               <ReactToPrint
@@ -39,6 +30,17 @@ class ResumePreview extends React.Component {
               <button className="btn btn-info" onClick={props.loadResumeExample}>Load Example</button>
             </div>
           </div>
+
+          <ResumePreviewInner
+            ref={el => (this.componentRef = el)}
+            personalDetails = {props.personalDetails}
+            professionalSummary = {props.professionalSummary}
+            educationalDetails = {props.educationalDetails}
+            employmentHistory = {props.employmentHistory}
+            skills = {props.skills}
+            externalLinks = {props.externalLinks}
+            personalProjects = {props.personalProjects}
+          />
         </div>
       </div>
     );
